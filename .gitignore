@@ -94,3 +94,6 @@ tests/windows
 # Hazel-specific
 bin
 bin-int
+
+# add
+out/
