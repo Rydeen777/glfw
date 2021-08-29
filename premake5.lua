@@ -47,7 +47,7 @@ project "GLFW"
 		
 		-- add these lines to the latest Chero GLFW submodule, otherwize link errors occur
 		--buildoptions { "-std=c11", "-lgdi32" }
-		staticruntime "On"
+		--staticruntime "On"
 
 		files
 		{
