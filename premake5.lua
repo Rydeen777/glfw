@@ -1,7 +1,7 @@
 project "GLFW"
 	kind "StaticLib"
 	language "C"
-	staticruntime "off"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -18,6 +18,7 @@ project "GLFW"
 		"src/vulkan.c",
 		"src/window.c"
 	}
+
 	filter "system:linux"
 		pic "On"
 
@@ -45,9 +46,6 @@ project "GLFW"
 	filter "system:windows"
 		systemversion "latest"
 		
-		-- add these lines to the latest Chero GLFW submodule, otherwize link errors occur
-		--buildoptions { "-std=c11", "-lgdi32" }
-		--staticruntime "On"
 
 		files
 		{
